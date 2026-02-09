@@ -18,6 +18,6 @@ Parsing saved http responses for other scripts with HTML parsing for URLs/endpoi
 `git clone <url>` clone this repository.<br>
 Make sure you have sublist3r installed, configure it's absolute path in the script.
 
-```reabcon.sh -o test1.txt -f scopes.csv -c -o output file```
+```reabcon.sh -o test1.txt -f scopes.csv -c -o output file```<br>
 -f <basic_scope_list> (add -c if it's hacker1 CSV scope).<br>
 -o <output_file>
