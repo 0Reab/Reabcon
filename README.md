@@ -36,5 +36,4 @@ This tool logs and outputs a lot, recommended an `empty working directory`.<br>
 
 Following option args are still in development:<br>
 `-w wordlist.txt` supply a wordlist for FFUF, work in progress atm.<br>
-`-c 'Cookie: example'` specify a cookie http header.<br>
-`-h 'Header: val'` specify arbitrary http header.<br>
+`-H 'Header: val'` specify arbitrary http header.<br>
