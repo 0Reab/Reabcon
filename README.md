@@ -24,8 +24,9 @@ Includes the following:<br>
 `git clone <url>` clone this repository.<br>
 `cd reabcon && chmod +x reabcon.sh` add execution rights to the script.<br>
 
-Ensure you have command names aliased the same as outlined in requirements section.<br>
-This tool logs and outputs a lot, recommended an empty working directory.<br> 
+Ensure you have command names `aliased` the same as outlined in requirements section.<br>
+Update the scripts custom `User-Agent` and `arbitrary HTTP header` to your specs (global variables at the start).<br>
+This tool logs and outputs a lot, recommended an `empty working directory`.<br> 
 
 ```reabcon -s scope.txt -r 5 -v```<br><br>
 `-s scope.txt` scope list, entries can be *.domain.com or https://domain.com or domain.com. <br>
