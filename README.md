@@ -4,20 +4,33 @@ My recon bash script for bug hunting automation.
 
 ## Features
 
-Subdomain discovery via:
-* Sublist3r
-* Waybackurls
+Comprehensive reconnaissance for bug bounty and penetration testing.<br>
+Includes the following:<br>
+- subdomain enumeration (amass, subfinder, sublist3r)<br>
+- fingerprinting and crawling (httpx, katana)<br>
+- URL parameter collecting (GAU, waybackurls)<br>
+- Screenshot live URLs (gowitness)<br>
+- Fuzzing live URLs and API endpoints (ffuf)<br>
+- Attempt 403 forbidden bypasses (ungate)<br>
+- Parsing HTML and JS for Info (secretfinder, linkfinder, custom parsers)<br>
 
-Host live checking, parsing by http response code.<br>
-Logging and saving the output.<br>
+## Requirements
 
-Parsing saved http responses for other scripts with HTML parsing for URLs/endpoints and informational finds.
+* amass, subfinder, sublist3r, httpx, gau, waybackurls, katana, gowitness, ungate, ffuf, secretfinder, linkfinder
 
 ## Installation & Usage
 
 `git clone <url>` clone this repository.<br>
-Make sure you have sublist3r installed, configure it's absolute path in the script.
 
-```reabcon.sh -o <output_file.txt> -f scope.csv -c```<br><br>
--f <basic_scope_list> (add -c if it's hacker1 CSV scope).<br>
--o <output_file>
+Ensure you have command names aliased the same as outlined in requirements section.<br>
+
+```reabcon -s scope.txt -r 5 -v```<br><br>
+-s scope.txt (scope list, entries can be *.domain.com or https://domain.com or domain.com). <br>
+-r 5 (rate limit 5 requests/second - default value). <br> 
+-v (verbose mode).<br>
+-b (run 403 bypass script ungate, only on logged 403s). <br>
+
+Following option args are still in development:<br>
+-w wordlist.txt (supply a wordlist for FFUF, work in progress atm).<br>
+-c (specify a cookie http header 'Cookie: example..').<br>
+-h (specify arbitrary http header 'Header: val'<br>
