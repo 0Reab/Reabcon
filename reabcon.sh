@@ -269,8 +269,8 @@ amass_worker() {
 
   run_cmd amass enum -passive -d "$domain" >/dev/null 2>&1 || true
   run_cmd amass subs -names -d "$domain" > "$tmp" 2>/dev/null || true
-  show_usage "amass enum -passive -d "$domain" >/dev/null 2>&1 || true"
-  show_usage "amass subs -names -d "$domain" > "$tmp" 2>/dev/null || true"
+  show_usage "amass enum -passive -d $domain >/dev/null 2>&1 || true"
+  show_usage "amass subs -names -d $domain > "$tmp" 2>/dev/null || true"
 
   [[ -s "$tmp" ]] && cat "$tmp" >> "$SCAN_DIR/amass.txt" || true
 }
@@ -280,7 +280,7 @@ subfinder_worker() {
   local tmp="$SCAN_DIR/subfinder_${domain}.txt"
 
   run_cmd subfinder -silent -d "$domain" -o "$tmp" 2>/dev/null || true
-  show_usage "subfinder -silent -d "$domain" -o "$tmp" 2>/dev/null || true"
+  show_usage "subfinder -silent -d $domain -o $tmp 2>/dev/null || true"
 
   [[ -s "$tmp" ]] && cat "$tmp" >> "$SCAN_DIR/subfinder.txt" || true
 }
@@ -290,6 +290,7 @@ sublist3r_worker() {
   local tmp="$SCAN_DIR/sublister_${domain}.txt"
 
   run_cmd sublist3r -d "$domain" -t 3 -o "$tmp" >/dev/null 2>&1 || true
+  show_usage "sublist3r -d $domain -t 3 -o $tmp >/dev/null 2>&1 || true"
 
   [[ -s "$tmp" ]] && cat "$tmp" >> "$SCAN_DIR/sublister.txt" || true
 }
