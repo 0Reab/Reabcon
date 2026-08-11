@@ -1,6 +1,7 @@
 # Reabcon
 
-My recon bash script for bug hunting automation.
+My recon bash script for bug hunting automation.<br>
+Currently work in progress, baseline is set just have to iron it out to be robust.<br>
 
 ## Features
 
@@ -25,12 +26,12 @@ Includes the following:<br>
 Ensure you have command names aliased the same as outlined in requirements section.<br>
 
 ```reabcon -s scope.txt -r 5 -v```<br><br>
--s scope.txt (scope list, entries can be *.domain.com or https://domain.com or domain.com). <br>
--r 5 (rate limit 5 requests/second - default value). <br> 
--v (verbose mode).<br>
--b (run 403 bypass script ungate, only on logged 403s). <br>
+`-s scope.txt` scope list, entries can be *.domain.com or https://domain.com or domain.com. <br>
+`-r 5` rate limit 5 requests/second - default value. <br> 
+`-v` verbose mode.<br>
+`-b` run 403 bypass script ungate, only on logged 403s. <br>
 
 Following option args are still in development:<br>
--w wordlist.txt (supply a wordlist for FFUF, work in progress atm).<br>
--c (specify a cookie http header 'Cookie: example..').<br>
--h (specify arbitrary http header 'Header: val'<br>
+`-w wordlist.txt` supply a wordlist for FFUF, work in progress atm.<br>
+`-c 'Cookie: example'` specify a cookie http header.<br>
+`-h 'Header: val'` specify arbitrary http header.<br>
