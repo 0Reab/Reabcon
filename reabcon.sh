@@ -10,9 +10,9 @@ trap 'echo "${red}[-] ERROR -> Failed at line $LINENO: ${b_red}$BASH_COMMAND${re
 #   SecretFinder.py, linkfinder.py
 
 RATE_LIMIT=5
-HTTP_HEADER="X-Intigriti-Bugbounty: Reab"
+HTTP_HEADER="X-Bugbounty: <name>"
 MAX_WORKERS=5
-USER_AGENT="reab@intigriti.me Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 ROOT_DIR="$PWD"
 SCAN_DIR="$ROOT_DIR/scans"
