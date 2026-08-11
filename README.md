@@ -22,8 +22,10 @@ Includes the following:<br>
 ## Installation & Usage
 
 `git clone <url>` clone this repository.<br>
+`cd reabcon && chmod +x reabcon.sh` add execution rights to the script.<br>
 
 Ensure you have command names aliased the same as outlined in requirements section.<br>
+This tool logs and outputs a lot, recommended an empty working directory.<br> 
 
 ```reabcon -s scope.txt -r 5 -v```<br><br>
 `-s scope.txt` scope list, entries can be *.domain.com or https://domain.com or domain.com. <br>
