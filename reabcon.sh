@@ -921,7 +921,6 @@ generate_report() {
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 main() {
-<< 'COMMENT'
   echo "$draw_line"
   banner
   echo "$draw_line"
@@ -981,7 +980,6 @@ main() {
   else
     echo "${star} Skipping 403 bypass (use -b to enable)${color_off}"
   fi
-COMMENT
 
   echo "${star} Generating report...${color_off}"
   generate_report
