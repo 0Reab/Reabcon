@@ -22,9 +22,9 @@ Includes the following:<br>
 ## Installation & Usage
 
 `git clone <url>` clone this repository.<br>
-`cd reabcon && chmod +x reabcon.sh` add execution rights to the script.<br>
+`cd reabcon && chmod +x reabcon.sh && chmod +x setup.sh` add execution rights to the scripts.<br>
+`./setup.sh` check if you have tools necessary/optional for the main script.<br>
 
-Ensure you have command names `aliased` the same as outlined in requirements section.<br>
 Update the scripts custom `User-Agent` and `arbitrary HTTP header` to your specs (global variables at the start).<br>
 This tool logs and outputs a lot, recommended an `empty working directory`.<br> 
 
