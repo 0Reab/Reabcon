@@ -785,7 +785,7 @@ run_api_fuzz() {
 # ── Screenshots ───────────────────────────────────────────────────────────────
 
 run_gowitness() {
-  run_cmd gowitness scan file -f "$ROOT_DIR/live_urls.txt" --screenshot-path "$SS_DIR" >/dev/null 2>&1 || true
+  run_cmd gowitness scan file -t 1 -f "$ROOT_DIR/live_urls.txt" --screenshot-path "$SS_DIR" >/dev/null 2>&1 || true
 }
 
 # ── 403 bypass ───────────────────────────────────────────────────────────────
